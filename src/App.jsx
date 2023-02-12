@@ -1,32 +1,40 @@
 import './App.css';
 
+import React, { Component } from 'react'
+
+
+import { NetlifyForm, Honeypot } from 'react-netlify-forms'
+
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Testing Netlify Forms</h1>
-        <form name="contact" method="POST" data-netlify="true">
-          <p>
-            <label>Your Name: <input type="text" name="name" /></label>
-          </p>
-          <p>
-            <label>Your Email: <input type="email" name="email" /></label>
-          </p>
-          <p>
-            <label>Your Role: <select name="role[]" multiple>
-              <option value="leader">Leader</option>
-              <option value="follower">Follower</option>
-            </select></label>
-          </p>
-          <p>
-            <label>Message: <textarea name="message"></textarea></label>
-          </p>
-          <p>
-            <button type="submit">Send</button>
-          </p>
-        </form>
-      </header>
-    </div>
+    <NetlifyForm name='Contact' action='/thanks' honeypotName='bot-field'>
+      {({ handleChange, success, error }) => (
+        <>
+          <Honeypot />
+          {success && <p>Thanks for contacting us!</p>}
+          {error && (
+            <p>Sorry, we could not reach our servers. Please try again later.</p>
+          )}
+          <div>
+            <label htmlFor='name'>Name:</label>
+            <input type='text' name='name' id='name' onChange={handleChange} />
+          </div>
+          <div>
+            <label htmlFor='message'>Message:</label>
+            <textarea
+              type='text'
+              name='message'
+              id='message'
+              rows='4'
+              onChange={handleChange}
+            />
+          </div>
+          <div>
+            <button type='submit'>Submit</button>
+          </div>
+        </>
+      )}
+    </NetlifyForm>
   );
 }
 
