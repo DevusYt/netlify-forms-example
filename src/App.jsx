@@ -7,29 +7,23 @@ import React from 'react'
 
 function App() {
   return (
-    <>
-      <form name="contact" method="POST" data-netlify="true">
+    <div>
+      <form name="Netlify Example Forms" netlify>
         <p>
-          <label>Your Name: <input type="text" name="name" /></label>
+          <label>Test 1
+            <input type="text" name='name' autocomplete="off" />
+          </label>
         </p>
         <p>
-          <label>Your Email: <input type="email" name="email" /></label>
-        </p>
-        <p>
-          <label>Your Role: <select name="role[]" multiple>
-            <option value="leader">Leader</option>
-            <option value="follower">Follower</option>
-          </select></label>
-        </p>
-        <p>
-          <label>Message: <textarea name="message"></textarea></label>
+          <label>Test 2
+            <input type="text" name='email' autocomplete="off" />
+          </label>
         </p>
         <p>
           <button type="submit">Send</button>
         </p>
       </form>
-      <input type="hidden" name="form-name" value="contact"></input>
-    </>
+    </div>
 
   );
 }
