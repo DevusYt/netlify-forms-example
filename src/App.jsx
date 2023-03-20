@@ -8,15 +8,21 @@ import React from 'react'
 function App() {
   return (
     <div>
-      <form name="Netlify Example Forms" netlify>
+      <form method="post">
+        <input type="hidden" name="form-name" value="contact" />
         <p>
-          <label>Test 1
-            <input type="text" name='name' autocomplete="off" />
+          <label>
+            Your Name: <input type="text" name="name" />
           </label>
         </p>
         <p>
-          <label>Test 2
-            <input type="text" name='email' autocomplete="off" />
+          <label>
+            Your Email: <input type="email" name="email" />
+          </label>
+        </p>
+        <p>
+          <label>
+            Message: <textarea name="message" />
           </label>
         </p>
         <p>
