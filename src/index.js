@@ -15,8 +15,8 @@ root.render(
   <BrowserRouter>
     <Routes>
 
-      <Route index path='/' element={<App />} />
-      <Route path='/stateful' element={<Stateful />} />
+      <Route index path='/' element={<Stateful />} />
+      <Route path='/stateful' element={<App />} />
       <Route path='/testo' element={<TryOut />} />
 
     </Routes>
