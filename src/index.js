@@ -8,6 +8,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Stateful from './Stateful';
 import App from './App';
+import TryOut from './TryOut';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -16,6 +17,7 @@ root.render(
 
       <Route index path='/' element={<App />} />
       <Route path='/stateful' element={<Stateful />} />
+      <Route path='/testo' element={<TryOut />} />
 
     </Routes>
   </BrowserRouter>
