@@ -9,7 +9,7 @@ export default function Stateful() {
         fetch("/", {
             method: "POST",
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
-            body: encode({ "form-name": "contact", formData })
+            body: encode({ "form-name": "contact", ...formData })
         })
             .then(() => alert("Success!"))
             .catch(error => alert(error));
@@ -27,6 +27,9 @@ export default function Stateful() {
         <>
             <MyNav />
 
+            <div className='d-flex justify-content-center align-items-center'>
+                <h1>Stateful</h1>
+            </div>
 
             <form onSubmit={(e) => handleSubmit(e)} class='d-flex flex-column justify-content-center align-items-center'>
                 <p>
