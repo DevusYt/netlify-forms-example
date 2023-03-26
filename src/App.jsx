@@ -4,13 +4,8 @@ import React from 'react'
 import MyNav from './MyNav';
 import Button from 'react-bootstrap/Button';
 
-
-//import { NetlifyForm, Honeypot } from 'react-netlify-forms'
-
 function App() {
   return (
-
-
     <div>
 
       <MyNav />
@@ -21,7 +16,7 @@ function App() {
         <textarea name="message"></textarea>
       </form>
 
-      <form name="contact" method="post" class='d-flex'>
+      <form name="contact" method="post" class='d-flex flex-column justify-content-center align-items-center'>
         <input type="hidden" name="form-name" value="contact" />
         <p>
           <label>Your Name: <input type="text" name="name" /></label>
