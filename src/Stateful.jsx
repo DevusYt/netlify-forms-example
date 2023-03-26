@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import MyNav from './MyNav'
 import Button from 'react-bootstrap/Button';
 
