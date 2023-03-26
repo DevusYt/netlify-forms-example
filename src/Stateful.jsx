@@ -17,10 +17,6 @@ export default function Stateful() {
         e.preventDefault();
     }
 
-    useEffect(() => {
-        console.log(formData)
-    })
-
     function encode(data) {
         return Object.keys(data)
             .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
