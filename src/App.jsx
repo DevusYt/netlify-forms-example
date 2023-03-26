@@ -1,6 +1,8 @@
 import './App.css';
 
 import React from 'react'
+import MyNav from './MyNav';
+import Button from 'react-bootstrap/Button';
 
 
 //import { NetlifyForm, Honeypot } from 'react-netlify-forms'
@@ -8,6 +10,8 @@ import React from 'react'
 function App() {
   return (
     <div>
+      <MyNav />
+
       <form name="Netlify Example Forms" netlify>
         <p>
           <label>Test 1
@@ -20,7 +24,7 @@ function App() {
           </label>
         </p>
         <p>
-          <button type="submit">Send</button>
+          <Button variant="outline-primary" type="submit">Primary</Button>{' '}
         </p>
       </form>
     </div>
