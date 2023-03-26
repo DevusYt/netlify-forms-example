@@ -8,6 +8,8 @@ function App() {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' })
 
   function handleSubmit(e) {
+    console.log(formData)
+
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
