@@ -1,24 +1,38 @@
 import React, { useState, useEffect } from 'react'
 import MyNav from './MyNav'
+import Button from 'react-bootstrap/Button';
 
 export default function Stateful() {
     const [formData, setFormData] = useState({ name: '', email: '', message: '' })
 
-    function handleSubmit() {
-        console.log(formData)
+    function handleSubmit(e) {
+        fetch("/", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: encode({ "form-name": "contact", formData })
+        })
+            .then(() => alert("Success!"))
+            .catch(error => alert(error));
+
+        e.preventDefault();
     }
 
     useEffect(() => {
         console.log(formData)
     })
 
+    function encode(data) {
+        return Object.keys(data)
+            .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+            .join("&");
+    }
 
     return (
         <>
             <MyNav />
 
 
-            <form onSubmit={() => handleSubmit()}>
+            <form onSubmit={(e) => handleSubmit(e)} class='d-flex flex-column justify-content-center align-items-center'>
                 <p>
                     <label>
                         Your Name: <input type="text" name="name" value={formData.name} onChange={(e) => {
@@ -47,7 +61,7 @@ export default function Stateful() {
                     </label>
                 </p>
                 <p>
-                    <button type="submit">Send</button>
+                    <Button variant="outline-primary" type="submit">Submit</Button>{' '}
                 </p>
             </form>
         </>
