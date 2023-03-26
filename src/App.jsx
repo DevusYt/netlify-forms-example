@@ -29,6 +29,7 @@ function App() {
     <>
       <MyNav />
 
+      <h1>Test</h1>
 
       <form onSubmit={(e) => handleSubmit(e)} class='d-flex flex-column justify-content-center align-items-center'>
         <p>
