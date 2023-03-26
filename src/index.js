@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -12,7 +12,7 @@ import TryOut from './TryOut';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <BrowserRouter>
+  <HashRouter>
     <Routes>
 
       <Route index path='/' element={<Stateful />} />
@@ -20,7 +20,7 @@ root.render(
       <Route path='/testo' element={<TryOut />} />
 
     </Routes>
-  </BrowserRouter>
+  </HashRouter>
 );
 
 reportWebVitals();
