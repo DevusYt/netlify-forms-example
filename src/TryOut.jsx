@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import MyNav from './MyNav'
 import Button from 'react-bootstrap/Button';
+
+
 export default function TryOut() {
     const [formData, setFormData] = useState({ name: '', email: '', message: '' })
 

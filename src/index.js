@@ -9,6 +9,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Stateful from './Stateful';
 import App from './App';
 import TryOut from './TryOut';
+// import ImageSliderTestPage from './ImageSliderTestPage';
+import ImageSlider from './ImageSlider';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -16,8 +18,9 @@ root.render(
     <Routes>
 
       <Route index path='/' element={<Stateful />} />
-      <Route path='/stateful' element={<App />} />
+      <Route path='#stateful' element={<App />} />
       <Route path='/testo' element={<TryOut />} />
+      <Route path='/image' element={<ImageSlider />} />
 
     </Routes>
   </HashRouter>
