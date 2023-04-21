@@ -18,7 +18,7 @@ root.render(
     <Routes>
 
       <Route index path='/' element={<Stateful />} />
-      <Route path='#stateful' element={<App />} />
+      <Route path='ohmygod' element={<App />} />
       <Route path='/testo' element={<TryOut />} />
       <Route path='/image' element={<ImageSlider />} />
 
