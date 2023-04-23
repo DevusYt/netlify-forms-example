@@ -2,7 +2,6 @@ import './App.css';
 
 import React from 'react'
 import MyNav from './MyNav';
-import Button from 'react-bootstrap/Button';
 
 function App() {
 
