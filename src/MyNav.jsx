@@ -11,7 +11,7 @@ export default function MyNav() {
                 <Navbar.Brand href="tryout">Forms-Test</Navbar.Brand>
                 <Nav className="me-auto">
                     <Nav.Link href="/">Static Forms</Nav.Link>
-                    <Nav.Link href="stateful">Stateful Forms</Nav.Link>
+                    <Nav.Link href="/#/stateful">Stateful Forms</Nav.Link>
                     <Nav.Link href="image">Image Slider</Nav.Link>
                 </Nav>
             </Container>
